@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count Page</title>
+</head>
+
+
+<h1>There are {{count}} words in you text </h1>
+<h2>Your Text </h2>
+<h3>{{fulltext}}</h3>
+<a href="{% url 'home' %}">Start Again</a>
+<!-- <button onclick="window.location.href = {% url 'home' %}">Start Again</button> -->
+<h1>Word Count:</h1>
+
+{% for word, countTotal in wordSorted %}
+{{word}} :- {{countTotal}}
+<br>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<!-- here count url means "count" is the name given to the url, while calling this function, we have given count name. -->
+<form action = "{%  url 'count'%}" >
+<h1>Hi this is vaibhav agrawal using django templates</h1>
+<h2> Project that I am going to make name is:</h2>
+{{ projectName }}
+<br><br>
+
+    <textarea required cols="50" rows="15" name="fulltext"></textarea>
+    <br><br>
+    <input type="submit" value="Count"/>
+    <button onclick="window.location.href = {% url 'about' %}">About</button>
+
+</form>
+</body>
+</html>
